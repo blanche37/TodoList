@@ -15,6 +15,7 @@
 		43497A562809EB8F004A3C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43497A542809EB8F004A3C19 /* LaunchScreen.storyboard */; };
 		43497A88280D8C46004A3C19 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43497A87280D8C46004A3C19 /* Purchase.swift */; };
 		43497A8E280EE6A4004A3C19 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43497A8D280EE6A4004A3C19 /* Repository.swift */; };
+		43497A912811A246004A3C19 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43497A902811A246004A3C19 /* UseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		43497A572809EB8F004A3C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43497A87280D8C46004A3C19 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		43497A8D280EE6A4004A3C19 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		43497A902811A246004A3C19 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				43497A8B280EE643004A3C19 /* App */,
 				43497A8A280EE63B004A3C19 /* View */,
+				43497A8F2811A236004A3C19 /* UseCase */,
 				43497A8C280EE650004A3C19 /* Repository */,
 				43497A89280EE633004A3C19 /* Model */,
 				43497A4F2809EB8E004A3C19 /* Main.storyboard */,
@@ -103,6 +106,14 @@
 				43497A8D280EE6A4004A3C19 /* Repository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		43497A8F2811A236004A3C19 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				43497A902811A246004A3C19 /* UseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				43497A8E280EE6A4004A3C19 /* Repository.swift in Sources */,
 				43497A88280D8C46004A3C19 /* Purchase.swift in Sources */,
 				43497A4E2809EB8E004A3C19 /* ViewController.swift in Sources */,
+				43497A912811A246004A3C19 /* UseCase.swift in Sources */,
 				43497A4A2809EB8E004A3C19 /* AppDelegate.swift in Sources */,
 				43497A4C2809EB8E004A3C19 /* SceneDelegate.swift in Sources */,
 			);
