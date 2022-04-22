@@ -26,24 +26,35 @@ final class PurchaseRepository: Repository {
     func save(purchase: Purchase, completion: @escaping () -> ()) {
         purchases.append(purchase)
         
-        let encoder = PropertyListEncoder()
-        do {
-            let data = try encoder.encode(purchases)
-            try data.write(to: url)
-            completion()
-        } catch {
-            print("encodingError")
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let encoder = PropertyListEncoder()
+            do {
+                let data = try encoder.encode(self.purchases)
+                try data.write(to: self.url)
+                completion()
+            } catch {
+                print("encodingError")
+            }
         }
     }
     
     func load(completion: @escaping ([Purchase]) -> ()) {
-        if let data = try? Data(contentsOf: url) {
-            let decoder = PropertyListDecoder()
-            do {
-                self.purchases = try decoder.decode([Purchase].self, from: data)
-                completion(purchases)
-            } catch {
-                print("decodingError")
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            if let data = try? Data(contentsOf: self.url) {
+                let decoder = PropertyListDecoder()
+                do {
+                    self.purchases = try decoder.decode([Purchase].self, from: data)
+                    completion(self.purchases)
+                } catch {
+                    print("decodingError")
+                }
             }
         }
     }
