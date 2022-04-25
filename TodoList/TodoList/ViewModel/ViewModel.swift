@@ -12,3 +12,25 @@ protocol ViewModel {
     func save(purchase: Purchase, completion: @escaping () -> ())
     func load(completion: @escaping () -> ())
 }
+
+class TodoListViewModel: ViewModel {
+    var purchases = [Purchase]()
+    var useCase: UseCase!
+    
+    init(useCase: UseCase) {
+        self.useCase = useCase
+    }
+    
+    func save(purchase: Purchase, completion: @escaping () -> ()) {
+        purchases.append(purchase)
+        useCase.save(purchase: purchase, completion: completion)
+        
+    }
+    
+    func load(completion: @escaping () -> ()) {
+        useCase.load { [weak self] consumptions in
+            self?.purchases = consumptions
+            completion()
+        }
+    }
+}
