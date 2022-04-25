@@ -8,5 +8,7 @@
 import Foundation
 
 protocol ViewModel {
-    
+    var purchases: [Purchase] { get }
+    func save(purchase: Purchase, completion: @escaping () -> ())
+    func load(completion: @escaping () -> ())
 }
