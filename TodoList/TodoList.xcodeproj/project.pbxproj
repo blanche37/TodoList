@@ -70,7 +70,6 @@
 				43497A8F2811A236004A3C19 /* UseCase */,
 				43497A8C280EE650004A3C19 /* Repository */,
 				43497A89280EE633004A3C19 /* Model */,
-				43497A4F2809EB8E004A3C19 /* Main.storyboard */,
 				43497A522809EB8F004A3C19 /* Assets.xcassets */,
 				43497A542809EB8F004A3C19 /* LaunchScreen.storyboard */,
 				43497A572809EB8F004A3C19 /* Info.plist */,
@@ -90,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				43497A4D2809EB8E004A3C19 /* ViewController.swift */,
+				43497A4F2809EB8E004A3C19 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
